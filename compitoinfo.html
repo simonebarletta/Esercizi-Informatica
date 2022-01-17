@@ -52,13 +52,7 @@
 
 </head>
 <body>
-    <p>Tecnologia Responsive</p>
-    <ol>
-        <li>Si ridimensiona allo schermo del device</li>
-        <li>Utilizzato per la navigazione da cellullare</li>
-        <li>Un Must per gli sviluppatori moderni</li>
-        <li>Lezione sugli INPUT con Javascript</li>
-        <li></li>
+        
     </ol>
 <div class="container">
     <form id="frm1" >
@@ -67,7 +61,7 @@
         <label for="verbo">Verbo</label>
         <input id ="verbo" type="text" name="verbo" value=""><br>
         <label for="complementooggetto">Complemento Oggetto</label>
-        <input id="complementooggetto" type="text" name="Complemento Oggetto" value=""><br><br>
+        <input id="co" type="text" name="Complemento Oggetto" value=""><br><br>
        <!-- <input type="submit" value="Submit"> -->
         
        </form>
@@ -79,8 +73,11 @@
        <p>Verbo:</p>
        <p id="inputverbo"></p>
        <p>Complemento Oggetto:</p>
-       <p id="inputcomplemento"></p>
+       <p id="inputCO"></p>
        
+
+       <p>Frase finale</p>
+       <p id="out"></p>
 
 
 <script>
@@ -89,9 +86,24 @@
 
 
 function CreaUnaFrase() {
+let soggetto="";
+let verbo="";
+let complementooggetto="";
 
-document.getElementById("inputsoggetto").innerHTML="ciao ma non è l'input";
-    
+soggetto=document.getElementById('soggetto').value;
+document.getElementById('inputsoggetto').innerHTML=soggetto;
+
+verbo=document.getElementById('verbo').value;
+document.getElementById('inputverbo').innerHTML=verbo;
+
+
+complementooggetto=document.getElementById('co').value;
+document.getElementById('inputCO').innerHTML=complementooggetto;
+
+let frase="";
+frase=soggetto+ " "+verbo+ " "+complementooggetto;
+
+document.getElementById('out').innerHTML=frase;
 }
 
 
