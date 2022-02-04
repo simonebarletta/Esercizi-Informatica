@@ -1,3 +1,25 @@
+   <!DOCTYPE html>
+<html lang="en">
+  <head>
+  <style>
+p{
+color: red;
+font-size : 20px;
+}
+</style>
+
+</head>
+<body>
+
+
+
+
+<script>
+const myInterval = setInterval(ciao, 1000);
+let contatore=0;
+
+function ciao() {
+  contatore++;
    document.getElementById("demo").innerHTML = contatore +" ";
 }
 
@@ -12,7 +34,7 @@
     <h2>codice tempo e click bottoni</h2>
 
     <p id="demo">
-      Questa pagina conta quanto tempo ci metti a premere il bottone e quante volte lo clicchi
+      Questa pagina conta quanto tempo ci metti a premere il bottone e quante volte lo      clicchi
     </p>
     <p id="out">..0.0</p>
     <p id="nclick">0</p>
