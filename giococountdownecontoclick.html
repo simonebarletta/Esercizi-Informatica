@@ -18,22 +18,21 @@
  
 
  
- 
  <p id="out">Countdown</p>
  <p id="demolition">3</p>
- <p id="nclick">Schiaccia</p>
  <p id="boh">13</p>
+ <p id="nclick">Schiaccia!</p>
 
- <button id="fufi" type="button" onclick="count()">Clicca</button>
+ <button id="ciao" type="button" onclick="count()">Clicca</button>
 
  <script>
  let i = 0;
  let start = Date.now();
  let CosoClick = 0;
- const myInterval = setInterval(pippo,1000);
- const Interval = setInterval(tonno,1000);
- const NonSo = setInterval(Rubik,13000);
- const Pollo = setInterval(fill,3000);
+ const myInterval = setInterval(ciao,1000);
+ const Interval = setInterval(ale,1000);
+ const NonSo = setInterval(gioco,13000);
+ const Pollo = setInterval(hello,3000);
  var contatore = 3;
  var bolo = 13;
  
@@ -45,28 +44,28 @@
  document.getElementById("nclick").innerHTML = CosoClick.toString();
  }
 
- function pippo() {
+ function ciao() {
  contatore--;
  document.getElementById("demolition").innerHTML = contatore+" ";
  }
  
- function fill() {
+ function hello() {
  clearInterval(myInterval)
  clearInterval(Pollo)
  document.getElementById("demolition").innerHTML = "Via!";
- document.getElementById("fufi").style.visibility = "visible";
+ document.getElementById("ciao").style.visibility = "visible";
  document.getElementById("boh").style.visibility = "visible";
  
  }
 
- function tonno() {
+ function ale() {
  bolo--;
  document.getElementById("boh").innerHTML = bolo+" ";
  }
 
- function Rubik() {
+ function gioco() {
  document.getElementById("boh").style.visibility = "hidden";
- document.getElementById("fufi").style.visibility = "hidden";
+ document.getElementById("ciao").style.visibility = "hidden";
  document.getElementById("demolition").style.visibility = "hidden";
  document.getElementById("out").style.visibility = "hidden";
  }
