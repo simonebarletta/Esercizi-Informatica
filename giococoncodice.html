@@ -1,0 +1,102 @@
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Document</title>
+ <style>
+ #fufi{
+ visibility: hidden;
+ }
+ #boh {
+ visibility: hidden;
+ }
+
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+ </style>
+ </head>
+ <body>
+ 
+
+ 
+ <p id="out">Countdown</p>
+ <p id="demolition">3</p>
+ <p id="boh">13</p>
+ <p id="nclick">Schiaccia!</p>
+
+ <button id="ciao" type="button" class="button-33" onclick="count()">Clicca</button>
+
+ <script>
+ let i = 0;
+ let start = Date.now();
+ let CosoClick = 0;
+ const myInterval = setInterval(ciao,1000);
+ const Interval = setInterval(ale,1000);
+ const NonSo = setInterval(gioco,13000);
+ const Pollo = setInterval(hello,3000);
+ var contatore = 3;
+ var bolo = 13;
+ 
+
+ function count() {
+ document.getElementById("out").innerHTML =
+ " " + (Date.now() - start) + " ms";
+ CosoClick++;
+ document.getElementById("nclick").innerHTML = CosoClick.toString();
+ }
+
+ function ciao() {
+ contatore--;
+ document.getElementById("demolition").innerHTML = contatore+" ";
+ }
+ 
+ function hello() {
+ clearInterval(myInterval)
+ clearInterval(Pollo)
+ document.getElementById("demolition").innerHTML = "Via!";
+ document.getElementById("ciao").style.visibility = "visible";
+ document.getElementById("boh").style.visibility = "visible";
+ 
+ }
+
+ function ale() {
+ bolo--;
+ document.getElementById("boh").innerHTML = bolo+" ";
+ }
+
+ function gioco() {
+ document.getElementById("boh").style.visibility = "hidden";
+ document.getElementById("ciao").style.visibility = "hidden";
+ document.getElementById("demolition").style.visibility = "hidden";
+ document.getElementById("out").style.visibility = "hidden";
+ }
+
+
+ 
+
+
+
+ </script>
+ </body>
+</html>
