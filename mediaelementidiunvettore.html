@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esercizio array vettori</title>
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esercizio vettori</title> 
+<script> 
+
+let arrayBello = [], 
+num = 50,indice; 
+function NumeriCasuali() { 
+for (let i = 0; i<num;i++) 
+{ 
+arrayBello[i] = parseInt(Math.random() * 1000);
+
+
+document.getElementById("out").innerHTML += arrayBello[i] + " "; 
+  } 
+} 
+function media() {
+let media,
+somma=0; 
+for (let i = 0; i<arrayBello.length;i++) 
+{ 
+somma=somma+arrayBello[i]; 
+}  
+media=somma/arrayBello.length;
+
+
+document.getElementById("outMedia").innerHTML += "la media è " +media + " " ;
+} 
+</script>
 </head>
-<body>
-
-    <button onclick="NumeriCasuali(50)">Cliccami </button>
-    <p id="output3"></p>
-    <button onclick="Media()">Fai Media</button>
-
-    <script>
-        function NumeriCasuali(n) {
-            let zeri=0;
-            let casuale=0;
-            let str="";
-            for(let i=0;i<n;i++)
-            {
-            casuale=Math.random();
-            zeri=Math.round(casuale*100);
-            str=str+" "+ zeri;  
-            }
-            document.getElementById("output3").innerHTML=str;
-        }
-    </script>
-
+<body> 
+<button onclick="NumeriCasuali()"> cliccami </button> 
+<button onclick="media()"> media </button> 
+<p id="out">numeri: 
+</p> 
+<p id="outMedia"> Media: 
+</p> 
 </body>
 </html>
