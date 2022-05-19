@@ -26,7 +26,7 @@
 <button type="button" class="btn btn-outline-warning" onclick="CalcoloTensione()">Calcolo tensione</button><br><br>
 <button type="button" class="btn btn-outline-dark" onclick="CalcoloCorrente()">Calcolo corrente</button><br><br>
 </div>
-    <p id="out"></p>
+<p id="out"></p>
 
 </body>
 <script>
@@ -66,9 +66,10 @@
         V3=CalcoloTensioni(R3, I)
         document.getElementById("out").innerHTML+= "V1 = " + V1 +"<br>"
         document.getElementById("out").innerHTML+= "V2 = " + V2 +"<br>"
-        document.getElementById("out").innerHTML+= "V3 = " + V3 +"<br><br>"
+        document.getElementById("out").innerHTML+= "V3 = " + V3 +"<br>"
         
-        }
+    }
+        
 
     function CalcoloTensioni(A, B){
         return A*B
@@ -88,6 +89,7 @@
         document.getElementById("out").innerHTML+= "I1 = " + I1 + "<br>"
         document.getElementById("out").innerHTML+= "I2 = " + I2 + "<br>"
         document.getElementById("out").innerHTML+= "I3 = " + I3 + "<br>"
+        
         }
 
         function CalcoloCorrenti(A, B){
